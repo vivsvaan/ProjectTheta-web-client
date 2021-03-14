@@ -1,0 +1,15 @@
+<div id="header-component">
+    <mat-toolbar color="primary" class="mat-elevation-x2">
+        <img [src]="logoPath" class="pad-8" />
+        HEADER
+        <div class="flex-spacer-x"></div>
+        <button mat-raised-button color="primary" (click)="logout()">
+            <span>LOGOUT</span>
+        </button>
+        <a routerLink="/profile">
+            <button mat-raised-button color="primary">
+                <span>profile</span>
+            </button>
+        </a>
+    </mat-toolbar>
+</div>

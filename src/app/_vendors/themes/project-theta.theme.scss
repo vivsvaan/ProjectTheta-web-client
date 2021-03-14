@@ -1,0 +1,122 @@
+@import "../../_styles/component-theme.styles.scss";
+@import "../../_styles/material-components.styles.scss";
+
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+/* Theme Palette for Project Theta */
+$primary: (
+    50 : #e4f4f1,
+    100 : #bae4dc,
+    200 : #8dd2c4,
+    300 : #5fc0ac,
+    400 : #3cb39b,
+    500 : #1aa589,
+    600 : #179d81,
+    700 : #139376,
+    800 : #0f8a6c,
+    900 : #087959,
+    A100 : #a8ffe3,
+    A200 : #75ffd3,
+    A400 : #42ffc3,
+    A700 : #29ffbb,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$accent: (
+    50 : #eeeeee,
+    100 : #d4d4d4,
+    200 : #b8b8b8,
+    300 : #9b9b9b,
+    400 : #858585,
+    500 : #707070,
+    600 : #686868,
+    700 : #5d5d5d,
+    800 : #535353,
+    900 : #414141,
+    A100 : #eef5f4,
+    A200 : #707070,
+    A400 : #333333,
+    A700 : #000000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+/* Define Theme related CSS Classes here */
+
+/* Define Palettes for Theme using Material Design palettes available or using your own palettes */
+
+$app-primary: mat-palette($primary);
+
+$app-accent: mat-palette($accent);
+
+$app-warn: mat-palette($mat-red);
+
+/* Create the theme object (a Sass containing all of the palettes) */
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@if map-get($app-theme, is-dark) {
+} @else {
+    $background-palette: map-get($app-theme, background);
+    $background-palette: map-merge(
+        $background-palette,
+        (
+            app-bar: #fff,
+            background: #fff,
+        )
+    );
+    $app-theme: map-merge(
+        $app-theme,
+        (
+            background: $background-palette,
+        )
+    );
+}
+
+body {
+    background: map-get(map-get($app-theme, background), background);
+    color: map-get(map-get($app-theme, foreground), base);
+}
+
+/* App Header Styling */
+#app-header {
+}
+
+/* App Footer Styling */
+
+#app-footer {
+}
+
+@include angular-material-theme($app-theme);
+@include custom-component-styles($app-theme);
+@include material-component-style($app-theme);

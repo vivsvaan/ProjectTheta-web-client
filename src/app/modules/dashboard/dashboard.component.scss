@@ -1,0 +1,26 @@
+@import '../../app.component.scss';
+
+#dashboard-component {
+    @extend .fill-height;
+    @extend .flex-col;
+
+    #dashboard-body {
+        @extend .flex-grow-1;
+        @extend .flex-col;
+        @extend .align-center;
+        
+        #router-outlet-wrapper {
+            @extend .flex-grow-1;
+            @extend .full-width;
+            max-width: 1160px !important;
+        }
+    }
+}
+
+.main-content {
+    width: 70%;
+}
+
+.side-bar {
+    width: 28%;
+}

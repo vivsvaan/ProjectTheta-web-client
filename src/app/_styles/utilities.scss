@@ -1,0 +1,401 @@
+/*
+    CSS Utilities - CSS Classes for common tasks
+*/
+
+/* ####################| Padding |#################### */
+
+.p-4 {
+    padding: 4px !important;
+}
+
+.pt-4 {
+    padding-top: 4px !important;
+}
+
+.pb-4 {
+    padding-bottom: 4px !important;
+}
+
+.pl-4 {
+    padding-left: 4px !important;
+}
+
+.pr-4 {
+    padding-right: 4px !important;
+}
+
+.px-4 {
+    @extend .pl-4;
+    @extend .pr-4;
+}
+
+.py-4 {
+    @extend .pt-4;
+    @extend .pb-4;
+}
+
+.p-8 {
+    padding: 8px !important;
+}
+
+.pt-8 {
+    padding-top: 8px !important;
+}
+
+.pb-8 {
+    padding-bottom: 8px !important;
+}
+
+.pl-8 {
+    padding-left: 8px !important;
+}
+
+.pr-8 {
+    padding-right: 8px !important;
+}
+
+.px-8 {
+    @extend .pl-8;
+    @extend .pr-8;
+}
+
+.py-8 {
+    @extend .pt-8;
+    @extend .pb-8;
+}
+
+.p-12 {
+    padding: 12px !important;
+}
+
+.pt-12 {
+    padding-top: 12px !important;
+}
+
+.pb-12 {
+    padding-bottom: 12px !important;
+}
+
+.pl-12 {
+    padding-left: 12px !important;
+}
+
+.pr-12 {
+    padding-right: 12px !important;
+}
+
+.px-12 {
+    @extend .pl-12;
+    @extend .pr-12;
+}
+
+.py-12 {
+    @extend .pt-12;
+    @extend .pb-12;
+}
+
+.p-16 {
+    padding: 16px !important;
+}
+
+.pt-16 {
+    padding-top: 16px !important; 
+}
+
+.pb-16 {
+    padding-bottom: 16px !important;
+}
+
+.pl-16 {
+    padding-left: 16px !important;
+}
+
+.pr-16 {
+    padding-right: 16px !important;
+}
+
+.px-16 {
+    @extend .pl-16;
+    @extend .pr-16;
+}
+
+.py-16 {
+    @extend .pt-16;
+    @extend .pb-16;
+}
+
+.p-none {
+    padding: 0;
+}
+
+.px-none {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.py-none {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.pt-none {
+    padding-top: 0 !important;
+}
+
+.pb-none {
+    padding-bottom: 0 !important;
+}
+
+/* ####################| Margin |#################### */
+
+.m-4 {
+    margin: 4px !important;
+}
+
+.mt-4 {
+    margin-top: 4px !important;
+}
+
+.mb-4 {
+    margin-bottom: 4px !important;
+}
+
+.ml-4 {
+    margin-left: 4px !important;
+}
+
+.mr-4 {
+    margin-right: 4px !important;
+}
+
+.mx-4 {
+    @extend .ml-4;
+    @extend .mr-4;
+}
+
+.my-4 {
+    @extend .mt-4;
+    @extend .mb-4;
+}
+
+.m-8 {
+    margin: 8px !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mb-8 {
+    margin-bottom: 8px !important;
+}
+
+.ml-8 {
+    margin-left: 8px !important;
+}
+
+.mr-8 {
+    margin-right: 8px !important;
+}
+
+.mx-8 {
+    @extend .ml-8;
+    @extend .mr-8;
+}
+
+.my-8 {
+    @extend .mt-8;
+    @extend .mb-8;
+}
+
+.m-12 {
+    margin: 12px !important;
+}
+
+.mt-12 {
+    margin-top: 12px !important;
+}
+
+.mb-12 {
+    margin-bottom: 12px !important;
+}
+
+.ml-12 {
+    margin-left: 12px !important;
+}
+
+.mr-12 {
+    margin-right: 12px !important;
+}
+
+.mx-12 {
+    @extend .ml-12;
+    @extend .mr-12;
+}
+
+.my-12 {
+    @extend .mt-12;
+    @extend .mb-12;
+}
+
+.m-16 {
+    margin: 16px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.mb-16 {
+    margin-bottom: 16px !important;
+}
+
+.ml-16 {
+    margin-left: 16px !important;
+}
+
+.mr-16 {
+    margin-right: 16px !important;
+}
+
+.mx-16 {
+    @extend .ml-16;
+    @extend .mr-16;
+}
+
+.my-16 {
+    @extend .mt-16;
+    @extend .mb-16;
+}
+
+.m-none {
+    margin: 0;
+}
+
+.mx-none {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.my-none {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mt-none {
+    margin-top: 0 !important;
+}
+
+.mb-none {
+    margin-bottom: 0 !important;
+}
+
+
+/* ####################| Height & Width |#################### */
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.fill-height {
+    height: 100%;
+}
+
+
+/* ####################| Fonts |#################### */
+
+
+/* ####################| Text |#################### */
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-caps {
+    text-transform: capitalize;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+
+/* ####################| Alignment |#################### */
+
+.align-center {
+    align-items: center;
+}
+
+
+/* ####################| Flex |#################### */
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-spacer-x {
+    flex: 1 1 auto !important;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ####################| Border & Shadows |#################### */
+
+.border-none {
+    border: none;
+    box-shadow: none;
+}
+
+.card-shadow-default {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ####################| Misc |#################### */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+.transparent {
+    background: transparent;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}

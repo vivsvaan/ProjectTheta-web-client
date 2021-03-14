@@ -1,0 +1,58 @@
+<p>login works!</p>
+<button mat-raised-button class="btn-primary" (click)="create_user = true">
+    <span>Register</span>
+</button>
+<button mat-button class="btn-primary" (click)="create_user = false">
+    <span>Login</span>
+</button>
+
+<form [formGroup]="loginForm" (ngSubmit)="login($event)">
+    <mat-form-field color="accent" *ngIf="create_user">
+        <mat-label>Name</mat-label>
+        <input
+            matInput
+            placeholder="name"
+            [formControl]="loginForm.controls.name"
+        />
+    </mat-form-field>
+
+    <mat-form-field color="accent" *ngIf="create_user">
+        <mat-label>Phone Number</mat-label>
+        <input
+            matInput
+            placeholder="phone number"
+            [formControl]="loginForm.controls.phone_number"
+        />
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+        <mat-label>Email</mat-label>
+        <input
+            matInput
+            placeholder="email"
+            [formControl]="loginForm.controls.email"
+        />
+    </mat-form-field>
+
+    <mat-form-field color="primary">
+        <mat-label>Password</mat-label>
+        <input
+            type="password"
+            placeholder="password"
+            [formControl]="loginForm.controls.password"
+        />
+    </mat-form-field>
+
+    <mat-form-field color="accent" *ngIf="create_user">
+        <mat-label>Confirm Password</mat-label>
+        <input
+            matInput
+            placeholder="confirm password"
+            [formControl]="loginForm.controls.confirm_password"
+        />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">
+        <span>{{ create_user ? "Register" : "Login" }}</span>
+    </button>
+</form>

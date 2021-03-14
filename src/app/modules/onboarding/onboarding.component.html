@@ -1,0 +1,28 @@
+<div class="onboarding-component">
+    <app-header></app-header>
+    <div class="onboarding-header">
+        {{ questions[activeQuestionIndex].question }}
+    </div>
+    <div class="options-list-container">
+        <div class="options-list">
+            <div
+                class="options-list-item"
+                *ngFor="let option of questions[activeQuestionIndex].options"
+                [ngClass]="{ selected: option.selected }"
+                (click)="selectionHandler(option)"
+            >
+                {{ option.name }}
+            </div>
+        </div>
+    </div>
+    <div class="message">{{ questions[activeQuestionIndex].disclaimer }}</div>
+    <div class="onboarding-action">
+        <button mat-raised-button color="primary" (click)="handleNextStep()">
+            Continue
+        </button>
+        <button mat-raised-button color="primary" (click)="setOnboardingData()">
+            Post Data
+        </button>
+    </div>
+    <app-footer></app-footer>
+</div>

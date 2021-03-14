@@ -1,0 +1,79 @@
+/*
+###########################################################################
+###################| IMPORT THEMES & TYPOGRAPHY |##########################
+##########################################################################
+*/
+
+@import "./app/_vendors/themes/project-theta.theme.scss";
+@import "./app/_vendors/typography/project-theta.typography.scss";
+
+/* You can add global styles to this file, and also import other style files */
+
+@import "./app/_styles/utilities.scss";
+
+html,
+body {
+    @extend .fill-height;
+}
+body {
+    @extend .m-none;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* ####################| Text Styles |#################### */
+
+.text-primary {
+    color: mat-color($primary, 500);
+}
+
+.text-accent {
+    color: mat-color($accent, 500);
+}
+
+.text-default {
+    color: #000;
+}
+
+/* ####################| Background Styles |#################### */
+
+.bg-primary {
+    background: mat-color($primary, 500);
+}
+
+.bg-accent {
+    background: mat-color($accent, 500);
+}
+
+.bg-white {
+    background: mat-contrast($primary, 500);
+}
+
+/* ####################| Button Styles |#################### */
+
+.btn {
+    &-primary {
+        @extend .bg-primary;
+        color: #fff;
+        &:hover {
+            background: mat-color($primary, 700);
+        }
+    }
+    &-secondary {
+        // border: 1px solid mat-color($primary, 500);
+        &:hover {
+            border: none;
+            background: mat-color($accent, 50);
+        }
+    }
+
+    &-tertiary {
+        border: none;
+        background: transparent;
+        color: mat-color($primary, 500);
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+            background: mat-color($accent, 50);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "../dashboard/dashboard.component.scss";
+.onboarding-component {
+    @extend .flex-col;
+    @extend .pt-16;
+    .onboarding-header {
+        @extend .text-center;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .options-list-container {
+        @extend .px-8;
+        .options-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 840px;
+            margin: auto;
+            .options-list-item {
+                width: 42%;
+                box-sizing: border-box;
+                border: 2px solid rgb(234, 236, 236);
+                border-radius: 6px;
+                @extend .m-16;
+                @extend .flex-centered;
+                height: 60px;
+                @extend .text-center;
+                @extend .cursor-pointer;
+                &.selected {
+                    border: 2px solid #1aa589;
+                }
+            }
+        }
+    }
+    .message {
+        @extend .text-center;
+        @extend .pt-8;
+    }
+    .onboarding-action {
+        @extend .pt-8;
+        @extend .flex-centered;
+    }
+}
